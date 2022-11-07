@@ -1,0 +1,72 @@
+@use "../../assets/variables.scss" as *;
+
+.card {
+    &__wrapper {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        height: 600px;
+        width: 360px;
+        padding: 0 28px;
+        margin-bottom: 20px;
+        background-color: $white;
+        border-radius: $br;
+        box-shadow: 0 3.2px 2.2px rgb(0 0 0 / 2%), 0 7px 5.4px rgb(0 0 0 / 3%),
+            0 12.1px 10.1px rgb(0 0 0 / 4%), 0 19.8px 18.1px rgb(0 0 0 / 4%),
+            0 34.7px 33.8px rgb(0 0 0 / 5%), 0 81px 81px rgb(0 0 0 / 7%);
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: $yellow;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            top: -20%;
+            left: -50%;
+            z-index: 0;
+        }
+    }
+
+    &__brand {
+        position: relative;
+        height: 26px;
+        margin: 12px 0;
+
+        .img {
+            height: 100%;
+        }
+    }
+
+    &__title {
+        position: relative;
+        color: $black;
+        font-family: $primary-ff;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+
+        .total-price {
+            float: right;
+        }
+    }
+
+    &__body {
+        height: calc(100% - 98px);
+        overflow-y: scroll;
+        position: relative;
+        font-family: $primary-ff;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .empty-cart {
+            font-size: 14px;
+            margin: 14px 0;
+            color: $black;
+            font-weight: 300;
+        }
+    }
+}

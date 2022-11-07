@@ -1,0 +1,25 @@
+@use "../../assets/variables.scss" as *;
+
+.main-layout {
+    &__wrapper {
+        position: relative;
+        min-height: 100vh;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__ripple {
+        position: absolute;
+        bottom: 0;
+        background-color: $yellow;
+        height: 250px;
+        width: 100%;
+        animation: $ani-1;
+        border-radius: 50%/100px 0px 0 0;
+    }
+}
+
+

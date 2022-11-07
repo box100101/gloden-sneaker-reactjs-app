@@ -1,0 +1,104 @@
+@use "../../assets/variables.scss" as *;
+
+.selected-card {
+    &__wrapper {
+        padding: 20px 0;
+        display: flex;
+        font-family: $primary-ff;
+        color: $black;
+
+        p,
+        h4 {
+            margin: 0;
+        }
+    }
+
+    &__left {
+        .img {
+            height: 90px;
+            width: 90px;
+            border-radius: 100%;
+            margin-right: 34px;
+
+            > img {
+                width: 140%;
+                transform: rotate(-28deg) translateY(-40px);
+                filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.2));
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+        
+        .name {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+
+            &__count {
+                display: flex;
+                align-items: center;
+
+                .button {
+                    background-color: #eeeeee;
+                    width: 28px;
+                    height: 28px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    font-weight: 700;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.2s;
+
+                    &:hover {
+                        background-color: #dddddd;
+                    }
+                }
+
+                .count-number {
+                    margin: 0 8px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            &__remove {
+                height: 28px;
+                width: 28px;
+                background-color: $yellow;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #f8d43f;
+                    box-shadow: -2px 2px 4px rgb(0 0 0 / 15%);
+                }
+
+                .img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
