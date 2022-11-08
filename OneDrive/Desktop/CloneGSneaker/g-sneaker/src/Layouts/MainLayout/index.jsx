@@ -1,5 +1,6 @@
 import CardLayout from "../CardLayout";
 import "./styles.scss";
+import "./responsive.scss";
 import data from "../../data/shoes.json";
 import { useEffect, useReducer } from "react";
 import { renderCart, renderProducts } from "./functions";

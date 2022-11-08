@@ -14,7 +14,7 @@ $br: 30px;
 
 
 // animation
-$ani-1: ripple linear 9s infinite alternate;
+$ani-1: ripple ease-in-out 9s infinite alternate;
 
 // keyframes
 @keyframes ripple {

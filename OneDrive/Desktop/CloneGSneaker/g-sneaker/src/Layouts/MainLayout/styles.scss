@@ -4,22 +4,23 @@
     &__wrapper {
         position: relative;
         min-height: 100vh;
+        height: auto;
         background-color: $white;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 40px;
+        overflow-y: scroll;
     }
 
     &__ripple {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         background-color: $yellow;
         height: 250px;
         width: 100%;
         animation: $ani-1;
-        border-radius: 50%/100px 0px 0 0;
+        border-radius: 30%/200px 0px 0 0;
     }
 }
-
-
